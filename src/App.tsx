@@ -1,7 +1,8 @@
+import React, { useState } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { operators } from "./constants/operators";
-import { useState } from "react";
 
 function App() {
   const [search, useSearch] = useState("");
@@ -25,11 +26,13 @@ function App() {
               type="search"
               placeholder="Search by name..."
               className="bg-transparent w-full outline-none  p-4 text-white "
-              onInput={(e) => useSearch(e.target.value)}
+              onInput={(e: React.ChangeEvent<HTMLInputElement>) =>
+                useSearch(e.currentTarget.value)
+              }
             ></input>
           </div>
 
-          <div className="grid grid-cols-4 gap-6 mt-8">
+          <div className="grid grid-cols-4 gap-6 mt-8 mb-8">
             {operators
               .filter((op) =>
                 search
