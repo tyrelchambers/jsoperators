@@ -26,9 +26,7 @@ function App() {
               type="search"
               placeholder="Search by name..."
               className="bg-transparent w-full outline-none  p-4 text-white "
-              onInput={(e: React.ChangeEvent<HTMLInputElement>) =>
-                useSearch(e.currentTarget.value)
-              }
+              onInput={(e) => useSearch(e.currentTarget.value)}
             ></input>
           </div>
 
