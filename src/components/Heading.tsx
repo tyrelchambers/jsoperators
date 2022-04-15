@@ -1,6 +1,6 @@
 import React from "react";
 
-const Heading = ({ children }) => {
+const Heading: React.FC = ({ children }) => {
   return (
     <h2 className={`mt-4 mb-4 text-gray-800 text-xl font-bold`}>{children}</h2>
   );
