@@ -7,3 +7,7 @@ export type Operator = {
   icon: string | React.ReactElement;
   moreInfo: string;
 };
+
+export interface Search {
+  name: string;
+}

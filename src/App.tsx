@@ -45,13 +45,13 @@ function App() {
     });
   };
   return (
-    <div className="w-screen min-h-screen h-full bg-gray-50 relative">
+    <div className="w-screen min-h-screen h-full bg-gray-50 relative p-4">
       <main className="relative top-10 ml-auto mr-auto w-full z-10">
         <div className="w-full max-w-screen-lg ml-auto mr-auto overflow-hidden">
-          <h1 className="text-center text-4xl font-bold text-gray-800">
+          <h1 className="text-center md:text-4xl text-xl font-bold text-gray-800">
             Javascript Operators
           </h1>
-          <p className="text-center ml-auto mr-auto text-gray-600 mt-6 text-2xl">
+          <p className="text-center ml-auto mr-auto text-gray-600 mt-6 text-lg md:text-2xl">
             Quick Javascript operator lookup
           </p>
         </div>
@@ -105,7 +105,7 @@ function App() {
           )}
 
           {!search.name && (
-            <div className="grid grid-cols-4 gap-6 mt-8 mb-8 items-start">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-8 mb-8 items-start p-4">
               {operators
                 .filter((op) =>
                   search.name
