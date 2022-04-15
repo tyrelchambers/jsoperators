@@ -1,16 +1,22 @@
 import React, { useEffect } from "react";
 import {
+  Search,
+  UseSearchType,
+  useNavigate,
+  useSearch,
+} from "@tanstack/react-location";
+import {
   faArrowUpRightFromSquare,
   faFaceSadTear,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate, useSearch } from "@tanstack/react-location";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Operator } from "./types";
 import { operators } from "./constants/operators";
 
 function App() {
-  const search = useSearch();
+  const search = useSearch<Search<{ name: string }>>();
 
   const operator =
     search.name &&
@@ -24,12 +30,12 @@ function App() {
   useEffect(() => {
     if (!search.name) {
       navigate({
-        search: "",
+        search: {},
       });
     }
   }, [search]);
 
-  const clickHandler = (op) => {
+  const clickHandler = (op: Operator) => {
     navigate({
       search: {
         name: op.name,
@@ -37,10 +43,10 @@ function App() {
     });
   };
 
-  const inputHandler = (e) => {
+  const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     navigate({
       search: {
-        name: e,
+        name: e.target.value,
       },
     });
   };
@@ -63,7 +69,7 @@ function App() {
               type="search"
               placeholder="Search by name..."
               className="bg-transparent w-full outline-none  p-4 text-white "
-              onInput={(e) => inputHandler(e.target.value)}
+              onInput={inputHandler}
               value={search.name}
             ></input>
           </div>

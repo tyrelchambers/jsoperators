@@ -4,7 +4,7 @@ import React from "react";
 export type Operator = {
   name: string;
   component: React.ReactElement;
-  icon: string | React.ReactElement;
+  icon: string;
   moreInfo: string;
 };
 

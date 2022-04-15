@@ -1,7 +1,7 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
-const CodeBlock = ({ children }) => {
+const CodeBlock: React.FC = ({ children }) => {
   return (
     <SyntaxHighlighter
       language="javascript"
