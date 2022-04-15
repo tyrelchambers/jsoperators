@@ -1,10 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  Search,
-  UseSearchType,
-  useNavigate,
-  useSearch,
-} from "@tanstack/react-location";
+import { Search, useNavigate, useSearch } from "@tanstack/react-location";
 import {
   faArrowUpRightFromSquare,
   faFaceSadTear,
@@ -22,9 +17,11 @@ function App() {
     search.name &&
     operators.find(
       (o) =>
+        // @ts-ignore
         o.name.toLowerCase().includes(search.name.toLowerCase()) ||
         o.icon === search.name
     );
+
   const navigate = useNavigate();
 
   useEffect(() => {
