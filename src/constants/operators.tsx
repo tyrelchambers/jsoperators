@@ -1,4 +1,4 @@
-import Addition from "../components/operators/Addition1";
+import Addition from "../components/operators/Addition";
 import Assignment from "../components/operators/Assignment";
 import AssignmentAddition from "../components/operators/AssignmentAddition";
 import AssignmentDivision from "../components/operators/AssignmentDivision";
@@ -30,6 +30,8 @@ import StrictNotEqual from "../components/operators/StrictNotEqual";
 import Subtraction from "../components/operators/Subtraction";
 import Ternary from "../components/operators/Ternary";
 import UnsignedRightShift from "../components/operators/UnsignedRightShift";
+import Spread from "../components/operators/Spread";
+import RestParameters from "../components/operators/RestParameters";
 
 export const operators: Operator[] = [
   {
@@ -249,5 +251,19 @@ export const operators: Operator[] = [
     icon: "?.",
     moreInfo:
       "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining",
+  },
+  {
+    name: "Spread syntax",
+    component: <Spread />,
+    icon: "...",
+    moreInfo:
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax",
+  },
+  {
+    name: "Rest parameters",
+    component: <RestParameters />,
+    icon: "...",
+    moreInfo:
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters",
   },
 ];
