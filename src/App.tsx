@@ -9,6 +9,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Operator } from "./types";
 import { operators } from "./constants/operators";
+import OperatorList from './components/operatorList/operatorList'
 
 function App() {
   const search = useSearch<Search<{ name: string }>>();
@@ -120,16 +121,7 @@ function App() {
                 )
                 .sort((a, b) => a.name.localeCompare(b.name))
                 .map((op) => (
-                  <button onClick={() => clickHandler(op)} key={op.name}>
-                    <div className="flex flex-col items-start bg-white p-4 rounded-lg w-full gap-2 border-2 hover:border-indigo-300 transition-all hover:shadow-lg ">
-                      <p className="text-indigo-500 text-xl font-bold">
-                        {op.icon}
-                      </p>
-                      <h2 className="text-lg font-bold text-gray-700 text-left">
-                        {op.name}
-                      </h2>
-                    </div>
-                  </button>
+                  <OperatorList operator={op} clickHandler={clickHandler}/>
                 ))}
             </div>
           )}
