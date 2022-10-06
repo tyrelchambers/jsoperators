@@ -109,21 +109,7 @@ function App() {
           )}
 
           {!search.name && (
-            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-8 mb-8 items-start p-4">
-              {operators
-                .filter((op) =>
-                  search.name
-                    ? op.name
-                        .toLowerCase()
-                        .includes(search.name.toLowerCase()) ||
-                      op.icon.includes(search.name)
-                    : true
-                )
-                .sort((a, b) => a.name.localeCompare(b.name))
-                .map((op) => (
-                  <OperatorList operator={op} clickHandler={clickHandler}/>
-                ))}
-            </div>
+            <OperatorList operators={operators} search={search} clickHandler={clickHandler}/>
           )}
         </section>
       </main>

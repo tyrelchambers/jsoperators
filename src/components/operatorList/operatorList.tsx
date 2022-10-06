@@ -1,19 +1,25 @@
 import React from 'react'
 import { Operator } from '../../types'
+import OperatorButton from '../operatorButton/operatorButton'
 
 
-const OperatorList = ({operator, clickHandler}: { operator: Operator, clickHandler:any })  => {
+const OperatorList = ({operators, search, clickHandler}: { operators: any, search:any, clickHandler:any })  => {
   return (
-    <button onClick={() => clickHandler(operator)} key={operator.name}>
-        <div className="flex flex-col items-start bg-white p-4 rounded-lg w-full gap-2 border-2 hover:border-indigo-300 transition-all hover:shadow-lg ">
-          <p className="text-indigo-500 text-xl font-bold">
-            {operator.icon}
-          </p>
-          <h2 className="text-lg font-bold text-gray-700 text-left">
-            {operator.name}
-          </h2>
-        </div>
-    </button>
+    <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-8 mb-8 items-start p-4">
+      {operators
+        .filter((op:Operator) =>
+          search.name
+            ? op.name
+                .toLowerCase()
+                .includes(search.name.toLowerCase()) ||
+              op.icon.includes(search.name)
+            : true
+        )
+        .sort((a:any, b:any) => a.name.localeCompare(b.name))
+        .map((op:Operator) => (
+          <OperatorButton operator={op} clickHandler={clickHandler}/>
+        ))}
+    </div>
   )
 }
 
