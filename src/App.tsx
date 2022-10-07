@@ -8,8 +8,8 @@ import {
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Operator } from "./types";
-import { operators } from "./constants/operators";
-import OperatorList from './components/operatorList/operatorList'
+import { operators } from "../remix/app/constants/operators";
+import OperatorList from "../remix/app/components/operatorList/operatorList";
 
 function App() {
   const search = useSearch<Search<{ name: string }>>();
@@ -109,7 +109,11 @@ function App() {
           )}
 
           {!search.name && (
-            <OperatorList operators={operators} search={search} clickHandler={clickHandler}/>
+            <OperatorList
+              operators={operators}
+              search={search}
+              clickHandler={clickHandler}
+            />
           )}
         </section>
       </main>

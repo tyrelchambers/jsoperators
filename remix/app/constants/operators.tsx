@@ -23,7 +23,7 @@ import LogicalAnd from "../components/operators/LogicalAnd";
 import LogicalNot from "../components/operators/LogicalNot";
 import LogicalOr from "../components/operators/LogicalOr";
 import Multiplication from "../components/operators/Multiplication";
-import { Operator } from "../types";
+import { Operator } from "../../../src/types";
 import OptionalChaining from "../components/operators/OptionalChaining";
 import Remainder from "../components/operators/Remainder";
 import StrictNotEqual from "../components/operators/StrictNotEqual";
