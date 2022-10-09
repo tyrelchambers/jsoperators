@@ -3,7 +3,7 @@ import {
   faFaceSadTear,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { LoaderFunction } from "@remix-run/node";
+import { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import React from "react";
 import { getOperator } from "~/operator.server";
@@ -15,6 +15,15 @@ export const loader: LoaderFunction = async ({ params }) => {
   const operator = await getOperator(params.name);
   return {
     operator,
+  };
+};
+
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+  const meta = data.operator.frontmatter.meta;
+
+  return {
+    title: meta.title,
+    description: meta.description,
   };
 };
 
