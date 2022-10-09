@@ -1,32 +1,43 @@
 {
-  "name": "jsoperators",
   "private": true,
-  "version": "0.0.0",
+  "sideEffects": false,
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "deploy": "fly deploy --remote-only",
+    "start": "remix-serve build",
+    "build": "npm run build:css && remix build",
+    "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
+    "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
+    "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-common-types": "^6.1.1",
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-regular-svg-icons": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/react-fontawesome": "^0.1.18",
-    "@tanstack/react-location": "^3.7.4",
-    "@types/react-syntax-highlighter": "^13.5.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "@fortawesome/fontawesome-common-types": "^6.2.0",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-regular-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@remix-run/node": "^1.7.2",
+    "@remix-run/react": "^1.7.2",
+    "@remix-run/serve": "^1.7.2",
+    "esbuild": "^0.14.54",
+    "mdx-bundler": "^9.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
-    "@vitejs/plugin-react": "^1.0.7",
-    "autoprefixer": "^10.4.4",
-    "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.23",
-    "typescript": "^4.5.4",
-    "vite": "^2.9.0"
+    "@remix-run/dev": "^1.7.2",
+    "@remix-run/eslint-config": "^1.7.2",
+    "@tailwindcss/typography": "^0.5.7",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "autoprefixer": "^10.4.12",
+    "concurrently": "^7.4.0",
+    "eslint": "^8.23.1",
+    "postcss": "^8.4.17",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.7.4"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
