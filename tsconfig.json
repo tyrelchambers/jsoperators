@@ -16,6 +16,11 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "remix/app/constants", "remix/app/components"],
+  "include": [
+    "src",
+    "remix/app/constants",
+    "remix/app/components",
+    "remix/app/operators"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

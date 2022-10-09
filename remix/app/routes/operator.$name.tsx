@@ -6,49 +6,53 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import React from "react";
+import { getOperator } from "~/operator.server";
+import { getMDXComponent } from "mdx-bundler/client";
+import Header from "~/layouts/Header";
 import { operators } from "~/constants/operators";
 
-export const loader: LoaderFunction = ({ request }) => {
-  const url = new URL(request.url);
-  const name = url.searchParams.get("name") as string;
-
+export const loader: LoaderFunction = async ({ params }) => {
+  const operator = await getOperator(params.name);
   return {
-    operator: name ? operators[name] : null,
+    operator,
   };
 };
 
-const Operator = () => {
+const _Operator = () => {
   const { operator } = useLoaderData();
+  const operatorMeta = operators.find(
+    (op) => op.filename === operator.slug.toLowerCase()
+  );
+
+  const Component = React.useMemo(
+    () => getMDXComponent(operator.code),
+    [operator.code]
+  );
 
   return (
-    <div className="mt-10 pb-20 w-full max-w-xl">
-      {!operator && (
-        <div className="flex flex-col items-center mt-20">
-          <FontAwesomeIcon
-            icon={faFaceSadTear}
-            className="text-indigo-500 text-6xl mb-10"
-          />
-          <p className="font-bold text-gray-800 mb-2">
-            Doesn't look like there are any operators matching that name or icon
+    <>
+      <Header />
+      <div className="mt-10 pb-20 w-full max-w-xl ml-auto mr-auto">
+        <header className="my-6">
+          <p className="text-6xl text-indigo-600 font-bold">
+            {operatorMeta?.icon}
           </p>
-          <p className="text-gray-600">
-            There's a chance this operator was missed
-          </p>
+          <h1 className="my-4 text-4xl font-bold">
+            {operator.frontmatter.meta.title}
+          </h1>
+          <a
+            className="underline text-indigo-500"
+            href={operatorMeta?.moreInfo}
+          >
+            See more on MDN
+          </a>
+        </header>
+        <div className="prose">
+          <Component />
         </div>
-      )}
-      <p className="mb-2 text-indigo-500 text-5xl font-bold">{operator.icon}</p>
-      <h2 className="text-4xl font-bold text-gray-800">{operator.name}</h2>
-      <a
-        href={operator.moreInfo}
-        className="block mt-4 text-indigo-500"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FontAwesomeIcon icon={faArrowUpRightFromSquare} /> More info
-      </a>
-      <div className="mt-10">{operator.component}</div>
-    </div>
+      </div>
+    </>
   );
 };
 
-export default Operator;
+export default _Operator;

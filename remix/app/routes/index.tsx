@@ -2,32 +2,15 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { LoaderFunction } from "@remix-run/node";
 import { useLoaderData, useNavigate, useSearchParams } from "@remix-run/react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import OperatorList from "~/components/operatorList/operatorList";
 import { operators } from "~/constants/operators";
+import { useUpdateQueryStringValueWithoutNavigation } from "~/utils";
 import { Operator } from "../../../src/types";
 
-export const loader: LoaderFunction = ({ request }) => {
-  const url = new URL(request.url);
-  const name = url.searchParams.get("name");
-
-  return { searchName: "" };
-};
-
 export default function Index() {
-  const { searchName } = useLoaderData();
+  const [search, setSearch] = useState("");
 
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!searchName) {
-      navigate("/");
-    }
-  }, [searchName]);
-
-  const clickHandler = (op: Operator) => {};
-
-  const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {};
   return (
     <div className="w-screen min-h-screen h-full bg-gray-50 relative p-4">
       <main className="relative top-10 ml-auto mr-auto w-full z-10">
@@ -51,17 +34,13 @@ export default function Index() {
               type="search"
               placeholder="Search by name..."
               className="bg-transparent w-full outline-none  p-4 text-white "
-              onInput={inputHandler}
-              value={searchName}
+              onInput={(e) => setSearch(e.currentTarget.value)}
+              value={search}
               name="search"
             ></input>
           </div>
 
-          <OperatorList
-            operators={operators}
-            search={searchName}
-            clickHandler={clickHandler}
-          />
+          <OperatorList operators={operators} search={search} />
         </section>
       </main>
       <div className="bg absolute top-0 w-full">
