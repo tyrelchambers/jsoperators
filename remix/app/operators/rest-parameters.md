@@ -2,7 +2,6 @@
 meta:
   title: Rest parameters operator
   description: This operator packs multiple parameters into one array variable
-icon:
 ---
 
 This operator packs multiple parameters into one array variable

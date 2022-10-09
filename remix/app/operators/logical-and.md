@@ -2,7 +2,6 @@
 meta:
   title: Logical AND
   description: The logical AND operator evaluates all values from left to right where it wil return false at the first falsy value. Otherwise, the very last value in the chain will be returned.
-icon:
 ---
 
 The logical AND operator evaluates all values from left to right where

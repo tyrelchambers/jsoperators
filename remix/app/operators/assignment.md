@@ -2,7 +2,6 @@
 meta:
   title: Assignment operator
   description: The assignment operator is used to assign a value to a variable.
-  icon:
 ---
 
 The assignment operator is used to assign a value to a variable.

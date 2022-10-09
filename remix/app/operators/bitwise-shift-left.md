@@ -2,7 +2,6 @@
 meta:
   title: Bitwise shift left
   description: The bitwise shift left operator will shift the specified number of bits to the left.
-icon:
 ---
 
 The bitwise shift left operator will shift the specified number of bits to the left.

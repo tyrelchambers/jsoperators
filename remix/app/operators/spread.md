@@ -2,7 +2,6 @@
 meta:
   title: Spread operator
   description: This operator expands an iterable like an array or a string in every place that can get multiple values
-icon:
 ---
 
 This operator expands an iterable like an array or a string in every

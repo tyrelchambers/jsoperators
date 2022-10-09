@@ -1,12 +1,8 @@
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { LoaderFunction } from "@remix-run/node";
-import { useLoaderData, useNavigate, useSearchParams } from "@remix-run/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import OperatorList from "~/components/operatorList/operatorList";
 import { operators } from "~/constants/operators";
-import { useUpdateQueryStringValueWithoutNavigation } from "~/utils";
-import { Operator } from "../../../src/types";
 
 export default function Index() {
   const [search, setSearch] = useState("");

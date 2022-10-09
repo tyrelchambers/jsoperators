@@ -2,7 +2,6 @@
 meta:
   title: Bitwise XOR
   description: The bitwise XOR operator results in a 32-bit integer where each bit in the numbers being XORed is set to 1 if the corresponding bits are different and 0 if they are the same.
-icon:
 ---
 
 The bitwise XOR operator results in a 32-bit integer where each bit in

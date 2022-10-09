@@ -2,7 +2,6 @@
 meta:
   title: Multiplication operator
   description: This operator multiplies two numbers together
-icon:
 ---
 
 This operator multiplies two numbers together. Unlike

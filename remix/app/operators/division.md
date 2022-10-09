@@ -2,7 +2,6 @@
 meta:
   title: Division operator
   description: The division operator takes the left number and divides it by the right number, producing the quoient. The left number is the dividend and the right is the operand.
-icon:
 ---
 
 The division operator takes the left number and divides it by the right

@@ -2,7 +2,6 @@
 meta:
   title: Greater than equal operator
   description: This operator check thats a value is greater than or equal to another value.
-icon:
 ---
 
 This operator check thats a value is greater than or equal to another

@@ -2,7 +2,6 @@
 meta:
   title: Ternary operator
   description: The ternary operator is a different, often more concise, way of writing an if/else conditional.
-icon:
 ---
 
 The ternary operator is a different, often more concise, way of writing

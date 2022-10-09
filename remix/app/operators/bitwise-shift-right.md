@@ -2,7 +2,6 @@
 meta:
   title: Bitwise shift right
   description: The bitwise shift right operator will shift the specified number of bits to the right.
-icon:
 ---
 
 The bitwise shift right operator will shift the specified number of bits

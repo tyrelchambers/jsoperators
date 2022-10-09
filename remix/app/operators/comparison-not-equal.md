@@ -2,7 +2,6 @@
 meta:
   title: Comparison not equal
   description: It will check that one value does not equal the other.
-icon:
 ---
 
 Inequality operator is like the [comparison](/comparison)

@@ -2,7 +2,6 @@
 meta:
   title: Assignment division operator
   description: This operator takes a variable and in a concise way, assigns another value to it while dividing the original value with the new value.
-icon:
 ---
 
 This operator takes a variable and in a concise way, assigns another

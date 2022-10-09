@@ -2,7 +2,6 @@
 meta:
   title: Logical OR
   description: The logical OR operator evaluates all values from left to right and returns the first truthy value.
-icon:
 ---
 
 The logical OR operator evaluates all values from left to right and

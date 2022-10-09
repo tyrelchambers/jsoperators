@@ -2,7 +2,6 @@
 meta:
   title: Comparison equal
   description: The comparison operator evaluates the left-hand value, to the left. This operation returns a boolean value and will not try to coerce the left-hand type to match the right-hand type.
-icon:
 ---
 
 The comparison operator evaluates the left-hand value, to the left. This

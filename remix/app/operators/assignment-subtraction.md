@@ -2,7 +2,6 @@
 meta:
   title: Assignment subtraction operator
   description: This operator takes a variable and in a concise way, assigns another value to it while subtracting the original value to the new value.
-icon:
 ---
 
 This operator takes a variable and in a concise way, assigns another

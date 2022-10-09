@@ -2,7 +2,6 @@
 meta:
   title: Greater than operator
   description: The greater than operator will check if one value is greater than the other and if it is, it'll return a true value.
-icon:
 ---
 
 The greater than operator will check if one value is greater than the

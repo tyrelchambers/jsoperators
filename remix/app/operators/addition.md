@@ -2,7 +2,6 @@
 meta:
   title: Addition operator
   description: This addition operator servers two purposes - one for mathematical equations and one for concatinating strings.
-icon: addition
 ---
 
 ## Numbers

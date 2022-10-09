@@ -2,7 +2,6 @@
 meta:
   title: Subtraction operator
   description: This operator subtracts one value from another
-icon:
 ---
 
 Subtraction behaves in the same way as the [addition](/operator/addition)

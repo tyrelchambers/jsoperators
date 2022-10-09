@@ -2,7 +2,6 @@
 meta:
   title: Assignment multiplication operator
   description: This operator takes a variable and in a concise way, assigns another value to it while multiplying the original value with the new value.
-icon:
 ---
 
 This operator takes a variable and in a concise way, assigns another

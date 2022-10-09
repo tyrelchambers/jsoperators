@@ -2,7 +2,6 @@
 meta:
   title: Optional chaining operator
   description: The optional chaining operator enables you to read the value of a property nested deep within ab object without having to do checks to see if each property if valid.
-icon:
 ---
 
 The optional chaining operator enables you to read the value of a
