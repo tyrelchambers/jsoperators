@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 import React from "react";
-import { Operator } from "../../../../src/types";
+import { Operator } from "~/types";
 
 const OperatorButton = ({ operator }: { operator: Operator }) => {
   return (

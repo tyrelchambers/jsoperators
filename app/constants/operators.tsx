@@ -1,6 +1,4 @@
-// import { Operator } from "../../";
-
-const ModzillaUrl = "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"
+import { Operator } from "~/types";
 
 // Each operator here should have an associated .md file in the operators folder
 export const operators: Operator[] = [
@@ -8,76 +6,77 @@ export const operators: Operator[] = [
     name: "Addition",
     filename: "addition",
     icon: "+",
-    moreInfo: `${ModzillaUrl}/Operators/Addition`,
+    moreInfo:
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition",
   },
   {
     name: "Subtraction",
     icon: "-",
     filename: "subtraction",
     moreInfo:
-      `${ModzillaUrl}/Operators/Subtraction`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction",
   },
   {
     name: "Multiplication",
     icon: "*",
     moreInfo:
-      `${ModzillaUrl}/Operators/Multiplication`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication",
     filename: "multiplication",
   },
   {
     name: "Division",
     icon: "/",
     moreInfo:
-      `${ModzillaUrl}/Operators/Division`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division",
     filename: "division",
   },
   {
     name: "Remainder",
     icon: "%",
     moreInfo:
-      `${ModzillaUrl}/Operators/Remainder`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder",
     filename: "remainder",
   },
   {
     name: "Exponentiation",
     icon: "**",
     moreInfo:
-      `${ModzillaUrl}/Operators/Exponentiation_operator`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation_operator",
     filename: "Exponentiation",
   },
   {
     name: "Bitwise and",
     icon: "&",
     moreInfo:
-      `${ModzillaUrl}/Operators/Bitwise_AND`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND",
     filename: "bitwise-and",
   },
   {
     name: "Bitwise or",
     icon: "|",
     moreInfo:
-      `${ModzillaUrl}/Operators/Bitwise_OR`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR",
     filename: "bitwise-or",
   },
   {
     name: "Bitwise xor",
     icon: "^",
     moreInfo:
-      `${ModzillaUrl}/Operators/Bitwise_XOR`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR",
     filename: "bitwise-xor",
   },
   {
     name: "Bitwise not",
     icon: "~",
     moreInfo:
-      `${ModzillaUrl}/Operators/Bitwise_NOT`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT",
     filename: "bitwise-not",
   },
   {
     name: "Bitwise shift left",
     icon: "<<",
     moreInfo:
-      `${ModzillaUrl}/Operators/Bitwise_shift_left`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_shift_left",
     filename: "bitwise-shift-left",
   },
   {
@@ -85,119 +84,119 @@ export const operators: Operator[] = [
     filename: "bitwise-shift-right",
     icon: ">>",
     moreInfo:
-      `${ModzillaUrl}/Operators/Bitwise_shift_right`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_shift_right",
   },
   {
     name: "Unsigned right shift",
     filename: "unsigned-right-shift",
     icon: ">>>",
     moreInfo:
-      `${ModzillaUrl}/Operators/Unsigned_right_shift`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift",
   },
   {
     name: "Comparison",
     filename: "comparison",
     icon: "==",
     moreInfo:
-      `${ModzillaUrl}/Operators/Equality`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Equality",
   },
   {
     name: "Inequality",
     filename: "comparison-not-equal",
     icon: "!=",
     moreInfo:
-      `${ModzillaUrl}/Operators/Inequality`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Inequality",
   },
   {
     name: "Less than",
     filename: "less-than",
     icon: "<",
     moreInfo:
-      `${ModzillaUrl}/Operators/Less_than`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less_than",
   },
   {
     name: "Less than or equal",
     filename: "less-than-equal",
     icon: "<=",
     moreInfo:
-      `${ModzillaUrl}/Operators/Less_than_or_equal`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal",
   },
   {
     name: "Greater than",
     filename: "greater-than",
     icon: ">",
     moreInfo:
-      `${ModzillaUrl}/Operators/Greater_than`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than",
   },
   {
     name: "Greater than or equal",
     filename: "greater-than-equal",
     icon: ">=",
     moreInfo:
-      `${ModzillaUrl}/Operators/Greater_than_or_equal`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal",
   },
   {
     name: "Strict comparison",
     filename: "comparison-strict-equal",
     icon: "===",
     moreInfo:
-      `${ModzillaUrl}/Operators/Strict_equality`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality",
   },
   {
     name: "Strict inequality",
     filename: "strict-not-equal",
     icon: "!==",
     moreInfo:
-      `${ModzillaUrl}/Operators/Strict_inequality`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality",
   },
   {
     name: "Logical and",
     filename: "logical-and",
     icon: "&&",
     moreInfo:
-      `${ModzillaUrl}/Operators/Logical_AND`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND",
   },
   {
     name: "Logical or",
     filename: "logical-or",
     icon: "||",
     moreInfo:
-      `${ModzillaUrl}/Operators/Logical_OR`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR",
   },
   {
     name: "Logical not",
     filename: "logical-not",
     icon: "!",
     moreInfo:
-      `${ModzillaUrl}/Operators/Logical_NOT`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT",
   },
   {
     name: "Ternary",
     filename: "ternary",
     icon: "?",
     moreInfo:
-      `${ModzillaUrl}/Operators/Conditional_Operator`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator",
   },
   {
     name: "Assignment",
     filename: "assignment",
     icon: "=",
     moreInfo:
-      `${ModzillaUrl}/Operators/Assignment`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment",
   },
   {
     name: "Assignment addition",
     filename: "assignment-addition",
     icon: "+=",
     moreInfo:
-      `${ModzillaUrl}/Operators/Addition_assignment`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment",
   },
   {
     name: "Assignment subtraction",
     filename: "assignment-subtraction",
     icon: "-=",
     moreInfo:
-      `${ModzillaUrl}/Operators/Subtraction_assignment`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment",
   },
 
   {
@@ -205,34 +204,34 @@ export const operators: Operator[] = [
     filename: "assignment-multiplication",
     icon: "*=",
     moreInfo:
-      `${ModzillaUrl}/Operators/Multiplication_assignment`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment",
   },
   {
     name: "Assignment division",
     filename: "assignment-division",
     icon: "/=",
     moreInfo:
-      `${ModzillaUrl}/Operators/Division_assignment`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division_assignment",
   },
   {
     name: "Optional chaining",
     filename: "optional-chaining",
     icon: "?.",
     moreInfo:
-      `${ModzillaUrl}/Operators/Optional_chaining`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining",
   },
   {
     name: "Spread syntax",
     filename: "spread-syntax",
     icon: "...",
     moreInfo:
-      `${ModzillaUrl}/Operators/Spread_syntax`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax",
   },
   {
     name: "Rest parameters",
     filename: "rest-parameters",
     icon: "...",
     moreInfo:
-      `${ModzillaUrl}/Functions/rest_parameters`,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters",
   },
 ];
