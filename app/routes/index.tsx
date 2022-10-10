@@ -28,7 +28,7 @@ export default function Index() {
             />
             <input
               type="search"
-              placeholder="Search by name..."
+              placeholder="Search by name or symbol..."
               className="bg-transparent w-full outline-none  p-4 text-white "
               onInput={(e) => setSearch(e.currentTarget.value)}
               value={search}
