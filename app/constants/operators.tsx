@@ -204,4 +204,10 @@ export const operators: Operator[] = [
     icon: "...",
     moreInfo: `${ModzillaUrl}/Functions/rest_parameters`,
   },
+  {
+    name: "Arguments object",
+    filename: "arguments-object",
+    icon: "...",
+    moreInfo: `${ModzillaUrl}/Functions/arguments`,
+  },
 ];

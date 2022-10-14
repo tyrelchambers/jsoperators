@@ -27,7 +27,7 @@ export default function Index() {
               style={{ width: "30px" }}
             />
             <input
-              type="search"
+              type="search" 
               placeholder="Search by name or symbol..."
               className="bg-transparent w-full outline-none  p-4 text-white "
               onInput={(e) => setSearch(e.currentTarget.value)}
@@ -39,6 +39,7 @@ export default function Index() {
           <OperatorList operators={operators} search={search} />
         </section>
       </main>
+      
       <div className="bg absolute top-0 w-full">
         <svg
           xmlns="http://www.w3.org/2000/svg"
