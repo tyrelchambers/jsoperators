@@ -214,6 +214,12 @@ export const operators: Operator[] = [
     name: "Boolean",
     filename: "boolean",
     icon: "true || false",
-    moreInfo: `${ModzillaUrl}/Functions/arguments`,
+    moreInfo: `${ModzillaUrl}/Global_Objects/Boolean`,
+  },
+  {
+    name: "Array",
+    filename: "array",
+    icon: "[0,1,2]",
+    moreInfo: `${ModzillaUrl}/Global_Objects/Array`,
   },
 ];
