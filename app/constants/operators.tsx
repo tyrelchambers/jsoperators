@@ -210,4 +210,10 @@ export const operators: Operator[] = [
     icon: "...",
     moreInfo: `${ModzillaUrl}/Functions/arguments`,
   },
+  {
+    name: "Boolean",
+    filename: "boolean",
+    icon: "true || false",
+    moreInfo: `${ModzillaUrl}/Functions/arguments`,
+  },
 ];
