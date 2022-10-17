@@ -51,7 +51,8 @@ const _Operator = () => {
           </h1>
           <a
             className="underline text-indigo-500"
-            href={operatorMeta?.moreInfo}
+            href={operatorMeta?.moreInfo} 
+            target="_blank"
           >
             See more on MDN
           </a>
