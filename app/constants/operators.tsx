@@ -194,7 +194,7 @@ export const operators: Operator[] = [
   },
   {
     name: "Spread syntax",
-    filename: "spread-syntax",
+    filename: "spread",
     icon: "...",
     moreInfo: `${ModzillaUrl}/Operators/Spread_syntax`,
   },
