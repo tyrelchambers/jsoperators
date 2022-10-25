@@ -14,6 +14,8 @@ export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "JSOperators",
   viewport: "width=device-width,initial-scale=1",
+  description:
+    "JSOperators is a place to find Javascript operator examples and explanations, quickly.",
 });
 
 export const links: LinksFunction = () => [
